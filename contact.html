@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" style="height: 30px"/>
+            </a>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">My Project</a>
+                    </li>
+                </ul>
+                <a class="btn btn-dark" href="#">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="p-5">
+        <h1>GET IN TOUCH</h1>
+        <div class="d-flex justify-content-center mt-4">
+            <form class="p-3">
+                <div class="mb-3">
+                    <label for="name" class="form-label mb-0">Name</label>
+                    <input id="name" name="name" type="text" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label mb-0">Email</label>
+                    <input id="email" name="email" type="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phoneNumber" class="form-label mb-0">Phone Number</label>
+                    <input id="phoneNumber" name="phoneNumber" type="tel" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="subject" class="form-label mb-0">Subject</label>
+                    <select id="subject" name="subject" class="form-select" required>
+                        <option value="" disabled selected>Select</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="form-label mb-0">Your Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="4" style="resize: none;" required></textarea>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn-contact btn-dark">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
