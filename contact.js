@@ -1,4 +1,4 @@
-// contact.js
+
 const form = document.getElementById("form");
 
 form.addEventListener("submit", function (event) {
@@ -10,7 +10,6 @@ form.addEventListener("submit", function (event) {
     const subject = document.getElementById("subject").value;
     const message = document.getElementById("message").value;
 
-    console.log("Form Submitted:");
     console.log("Name:", name);
     console.log("Email:", email);
     console.log("Phone Number:", phoneNumber);
