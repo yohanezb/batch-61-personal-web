@@ -73,11 +73,9 @@ function calculateDuration(start, end) {
 
 function renderProjects() {
   let projectList = document.getElementById("projectList");
-  projectList.innerHTML = "";
 
-  projects.forEach((project, index) => {
-    projectList.innerHTML += `
-
+  let projectCards = projects.map((project) => {
+    return `
       <div class="col-md-4">
           <div class="card shadow-sm card-container p-2">
               <img src="${project.image}" class="card-img-top card-img">
@@ -99,6 +97,8 @@ function renderProjects() {
       </div>
     `;
   });
+
+  projectList.innerHTML = projectCards.join('');
 }
 
 
