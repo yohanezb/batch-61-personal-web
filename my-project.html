@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/my-project.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" style="height: 30px"/>
+            </a>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">My Project</a>
+                    </li>
+                </ul>
+                <a class="btn btn-dark" href="#">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="m-3">
+        <h1>Add My Project</h1>
+        <div class="d-flex justify-content-center mt-4">
+            <form id="form" class="p-3">
+                <div class="mb-3">
+                    <label for="name" class="form-label mb-0">Project Name</label>
+                    <input id="name" name="name" type="text" class="form-control" required>
+                </div>
+                <div class="d-flex mb-3 gap-3">
+                    <div class="w-50">
+                        <label for="project-start-date" class="form-label mb-0">Start Date</label>
+                        <input id="project-start-date" name="project-start-date" type="date" class="form-control" required>
+                    </div>
+                    <div class="w-50">
+                        <label for="project-end-date" class="form-label mb-0">End Date</label>
+                        <input id="project-end-date" name="project-end-date" type="date" class="form-control" required>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="project-description" class="form-label mb-0">Description</label>
+                    <textarea id="project-description" name="project-description" class="form-control" rows="4" style="resize: none;" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label mb-0">Technologies</label>
+                    <div class="row gx-2">
+                        <div class="col-6 d-flex align-items-center gap-2">
+                            <input id="node-js" name="node-js" type="checkbox" />
+                            <label for="node-js" class="mb-0">Node Js</label>
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2">
+                            <input id="next-js" name="next-js" type="checkbox" />
+                            <label for="next-js" class="mb-0">Next Js</label>
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2 mt-2">
+                            <input id="react-js" name="react-js" type="checkbox" />
+                            <label for="react-js" class="mb-0">React Js</label>
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2 mt-2">
+                            <input id="typescript" name="typescript" type="checkbox" />
+                            <label for="typescript" class="mb-0">TypeScript</label>
+                        </div>
+                    </div>
+                </div>
+                <label for="project-img" class="form-label mb-0">Upload Image</label>
+                    <div class="upload-img mb-3">
+                        <input type="file" id="project-img" name="project-img">
+                        <span id="file-chosen">Choose</span>
+                        <img src="assets/img/attach.png" alt="attach" />
+                    </div>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn-contact btn-dark">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: white;">
+        <h2 class="text-center fw-bold mb-5">MY PROJECT</h2>
+        <div class="container">
+            <div class="row g-4 justify-content-center" id="projectList">
+                <!-- isi -->
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/my-project.js"></script>
+</body>
+</html>

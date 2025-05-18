@@ -16,3 +16,4 @@ form.addEventListener("submit", function (event) {
     console.log("Subject:", subject);
     console.log("Message:", message);
 });
+
