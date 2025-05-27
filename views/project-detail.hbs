@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/my-project.css">
+    <link rel="stylesheet" href="/assets/css/project-detail.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    {{> navbar }}
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5 mt-3">{{title}}</h2>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{image}}" class="project-image" alt="Project Image" style="width: 100%;">
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <h5>Duration</h5>
+                        <p><i class="fa-solid fa-calendar-days me-2"></i>{{startDate}} - {{endDate}}</p>
+                        <p><i class="fa-solid fa-clock me-2"></i>{{duration}}</p>
+                    </div>
+
+                    <div>
+                        <h5>Technologies</h5>
+                        {{#if technologies}}
+                            <div class="row">
+                                {{#each technologies}}
+                                    <div class="col-6 mb-3 d-flex align-items-center">
+                                        <div class="tech-icon">
+                                            {{#if (eq this "react-js")}}<img src="/assets/img/{{this}}.png" class="icon me-2" />React JS{{/if}}
+                                            {{#if (eq this "node-js")}}<img src="/assets/img/{{this}}.png" class="icon me-2" />Node JS{{/if}}
+                                            {{#if (eq this "next-js")}}<img src="/assets/img/{{this}}.png" class="icon me-2" />Next JS{{/if}}
+                                            {{#if (eq this "typescript")}}<img src="/assets/img/{{this}}.png" class="icon me-2" />TypeScript{{/if}}
+                                        </div>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        {{else}}
+                            <p><em>No technologies listed.</em></p>
+                        {{/if}}
+                    </div>
+
+                </div>
+            </div>
+            <div class="mt-5">
+                <h5>Description</h5>
+                <p>{{description}}</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="/assets/js/my-project.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

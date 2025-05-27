@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit {{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/my-project.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    {{> navbar }}
+
+    <section class="m-3">
+        <h1>Edit Project</h1>
+        <div class="d-flex justify-content-center mt-4">
+             <form method="POST" enctype="multipart/form-data" action="/update-project/{{project.id}}">
+                <div class="mb-3">
+                    <label for="name" class="form-label mb-0">Project Name</label>
+                    <input id="name" name="name" type="text" class="form-control " value="{{project.title}}" required>
+                </div>
+                <div class="d-flex mb-3 gap-3">
+                    <div class="w-50">
+                        <label for="project-start-date" class="form-label mb-0">Start Date</label>
+                        <input id="project-start-date" name="project-start-date" type="date" class="form-control" value="{{project.start_date}}" required>
+                    </div>
+                    <div class="w-50">
+                        <label for="project-end-date" class="form-label mb-0">End Date</label>
+                        <input id="project-end-date" name="project-end-date" type="date" class="form-control" value="{{project.end_date}}" required>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="project-description" class="form-label mb-0">Description</label>
+                    <textarea id="project-description" name="project-description" class="form-control" rows="4" style="resize: none;" required>{{project.description}}</textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label mb-0">Technologies</label>
+                    <div class="row gx-2">
+                        <div class="col-6 d-flex align-items-center gap-2">
+                            <input id="node-js" name="node-js" type="checkbox" {{#if (includes project.technologies "node-js")}}checked{{/if}}/>
+                            <label for="node-js" class="mb-0">Node Js</label>
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2">
+                            <input id="next-js" name="next-js" type="checkbox" {{#if (includes project.technologies "next-js")}}checked{{/if}}/>
+                            <label for="next-js" class="mb-0">Next Js</label>
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2 mt-2">
+                            <input id="react-js" name="react-js" type="checkbox" {{#if (includes project.technologies "react-js")}}checked{{/if}}/>
+                            <label for="react-js" class="mb-0">React Js</label>
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2 mt-2">
+                            <input id="typescript" name="typescript" type="checkbox" {{#if (includes project.technologies "typescript")}}checked{{/if}}/>
+                            <label for="typescript" class="mb-0">TypeScript</label>
+                        </div>
+                    </div>
+                </div>
+                <label for="project-img" class="form-label mb-0">Upload Image</label>
+                    <div class="edit-img mb-3">
+                        <input type="file" id="project-img" name="project-img">
+                        <span id="file-chosen">Choose</span>
+                        <img src="{{project.image}}" class="ms-2" alt="attach" />
+                    </div>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn-contact btn-dark">Update</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="assets/js/my-project.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

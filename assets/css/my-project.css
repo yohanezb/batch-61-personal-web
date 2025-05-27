@@ -48,7 +48,13 @@ form label {
 }
 
 .card-title {
-    font-size: 16px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.card-duration {
+    color: #999;
+    font-size: 15px;
     font-weight: 600;
 }
 
@@ -59,6 +65,8 @@ form label {
     white-space: normal;
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    
 }
 
 
@@ -76,7 +84,7 @@ form label {
 .icon {
     margin-right: 10px;
     color: #333;
-    height: 20px;
+    height: 30px;
 }
 
 h1 {
@@ -107,6 +115,31 @@ h1 {
 }
 
 .upload-img input[type="file"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.edit-img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 15px;
+    background-color: white;
+    width: 100%;
+}
+
+.edit-img img {
+    width: 100%;
+}
+
+.edit-img span {
+    color: #999;
+    flex: 1;
+}
+
+.edit-img input[type="file"] {
     position: absolute;
     opacity: 0;
 }

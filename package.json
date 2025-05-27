@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "hbs": "^4.2.0",
+    "multer": "^2.0.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.0"
+  },
+  "name": "batch-61",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yohanezb/batch-61-personal-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/yohanezb/batch-61-personal-web/issues"
+  },
+  "homepage": "https://github.com/yohanezb/batch-61-personal-web#readme"
+}
